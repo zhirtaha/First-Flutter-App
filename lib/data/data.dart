@@ -34,4 +34,9 @@ const data = [
       "countryFlag": "https://img.icons8.com/color/344/sweden-circular.png",
       "countryDetail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum bibendum sem eu porttitor. Integer a tincidunt lectus. Vestibulum rhoncus sapien ac lectus consequat viverra. Nulla quis tempus odio, mollis lobortis nunc. Fusce varius placerat gravida. Integer elementum vehicula nunc, eget convallis metus venenatis sit amet. Vestibulum lorem tortor, maximus vitae cursus sit amet, dapibus sit amet dui"
     },
+    {
+      "countryName": "Germany",
+      "countryFlag": "https://img.icons8.com/color/344/germany-circular.png",
+      "countryDetail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum bibendum sem eu porttitor. Integer a tincidunt lectus. Vestibulum rhoncus sapien ac lectus consequat viverra. Nulla quis tempus odio, mollis lobortis nunc. Fusce varius placerat gravida. Integer elementum vehicula nunc, eget convallis metus venenatis sit amet. Vestibulum lorem tortor, maximus vitae cursus sit amet, dapibus sit amet dui"
+    },
   ];
