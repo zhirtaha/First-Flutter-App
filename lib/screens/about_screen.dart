@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+
+class AboutScreen extends StatelessWidget {
+  const AboutScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.orange[700],
+        title: Text(
+          'About'
+        ),
+      ),
+    );
+  }
+}

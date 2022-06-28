@@ -1,42 +1,26 @@
 import 'package:first_flutter_app/screens/country_detail_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:first_flutter_app/data/data.dart';
 
 class CountrList extends StatelessWidget {
-  CountrList({Key? key}) : super(key: key);
-
-  final List countries = [
-    {
-      "country_name": "France",
-      "flag": "https://img.icons8.com/color/344/france-circular.png"
-    },
-    {
-      "country_name": "Spain",
-      "flag": "https://img.icons8.com/color/2x/spain2-circular.png"
-    },
-    {
-      "country_name": "Brazil",
-      "flag": "https://img.icons8.com/color/2x/brazil-circular.png"
-    },
-    {
-      "country_name": "United States of America",
-      "flag": "https://img.icons8.com/color/344/usa-circular.png"
-    },
-    {
-      "country_name": "Kurdistan",
-      "flag": "https://img.icons8.com/color/2x/kurdistan.png"
-    },
-    {
-      "country_name": "South Korea",
-      "flag": "https://img.icons8.com/fluency/344/south-korea-circular.png"
-    },
-    {
-      "country_name": "Sweden",
-      "flag": "https://img.icons8.com/color/344/sweden-circular.png"
-    },
-  ];
+  const CountrList({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer:  Drawer(
+        child: ListView(
+          children: [
+            ListTile(
+              onTap: (){
+                Navigator.of(context).pushNamed('/about');
+              },
+              title: Text(
+                'About'
+              ),
+            )
+          ],
+        )
+      ),
       appBar: AppBar(
         backgroundColor: Colors.orange[700],
         centerTitle: true,
@@ -68,11 +52,12 @@ class CountrList extends StatelessWidget {
                             onPressed: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(builder: (context) {
-                                 return CountryDetailScreen(countryName: countries[index]["country_name"].toString(),imageUrl:countries[index]["flag"].toString() ,);
+                                 return CountryDetailScreen(countryName: countries[index]["country_name"].toString(),imageUrl:countries[index]["flag"].toString(), detail: countries[index]["detail"].toString(),);
                                 }),
                               );
                             },
-                            icon: Icon(Icons.arrow_forward)),
+                            icon: Icon(Icons.arrow_forward)
+                        ),
                       ),
                     );
                   }),
