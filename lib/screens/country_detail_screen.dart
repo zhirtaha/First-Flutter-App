@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DetailScreen extends StatelessWidget {
-   const DetailScreen({Key? key, required this.imageUrl, required this.countryName}) : super(key: key);
+class CountryDetailScreen extends StatelessWidget {
+   const CountryDetailScreen({Key? key, required this.imageUrl, required this.countryName}) : super(key: key);
 
   final String imageUrl;
   final String countryName;

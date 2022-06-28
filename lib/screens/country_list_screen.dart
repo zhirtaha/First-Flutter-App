@@ -1,8 +1,8 @@
 import 'package:first_flutter_app/screens/country_detail_screen.dart';
 import 'package:flutter/material.dart';
 
-class StudentScreen extends StatelessWidget {
-  StudentScreen({Key? key}) : super(key: key);
+class CountrList extends StatelessWidget {
+  CountrList({Key? key}) : super(key: key);
 
   final List countries = [
     {
@@ -68,7 +68,7 @@ class StudentScreen extends StatelessWidget {
                             onPressed: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(builder: (context) {
-                                 return DetailScreen(countryName: countries[index]["country_name"].toString(),imageUrl:countries[index]["flag"].toString() ,);
+                                 return CountryDetailScreen(countryName: countries[index]["country_name"].toString(),imageUrl:countries[index]["flag"].toString() ,);
                                 }),
                               );
                             },

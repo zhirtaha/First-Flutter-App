@@ -1,5 +1,5 @@
 import 'package:first_flutter_app/models/city_model.dart';
-import 'package:first_flutter_app/screens/cities_detail.dart';
+import 'package:first_flutter_app/screens/kurdistan_cities_detail.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -39,7 +39,7 @@ class KurdistanCitiesScreen extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(5.0),
+              padding: EdgeInsets.all(10.0),
               child: ListView.builder(
                   shrinkWrap: true,
                   itemCount: city.length,
@@ -53,9 +53,12 @@ class KurdistanCitiesScreen extends StatelessWidget {
                             padding: EdgeInsets.all(0.0),
                             height: 200.0,
                             width: 400.0,
-                            child: Image.network(
-                              city[index].cityImage.toString(),
-                              fit: BoxFit.cover,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10.0),
+                              child: Image.network(
+                                city[index].cityImage.toString(),
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                           GestureDetector(
@@ -64,7 +67,7 @@ class KurdistanCitiesScreen extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) {
-                                    return CityDetail(imageUrl: city[index].cityImage.toString(),cityName: city[index].cityName.toString(),);
+                                    return KurdistanCityDetail(imageUrl: city[index].cityImage.toString(),cityName: city[index].cityName.toString(),);
                                   },
                                 ),
                               );
@@ -75,13 +78,14 @@ class KurdistanCitiesScreen extends StatelessWidget {
                                   color: Colors.purple.withOpacity(0.7),
                                   borderRadius: BorderRadius.circular(10.0),
                                 ),
-                                height: 50.0,
-                                width: 125.0,
+                                height: 55.0,
+                                width: 130.0,
                                 child: Text(city[index].cityName.toString(),
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 18.0,
-                                        fontWeight: FontWeight.bold))),
+                                        fontWeight: FontWeight.bold))
+                            ),
                           ),
                         ],
                       ),

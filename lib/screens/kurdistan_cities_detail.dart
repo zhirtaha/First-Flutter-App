@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CityDetail extends StatelessWidget {
-  const CityDetail({Key? key, required this.imageUrl, required this.cityName}) : super(key: key);
+class KurdistanCityDetail extends StatelessWidget {
+  const KurdistanCityDetail({Key? key, required this.imageUrl, required this.cityName}) : super(key: key);
 
   final String imageUrl;
   final String cityName;
@@ -31,7 +31,8 @@ class CityDetail extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text(
+            children: [
+              Text(
               cityName,
               style: TextStyle(
                 fontSize: 40.0,
@@ -45,7 +46,9 @@ class CityDetail extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text('detail')],
+            children: [
+              Text('detail')
+            ],
           )
         ],
       ),

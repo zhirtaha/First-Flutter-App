@@ -1,5 +1,5 @@
 class CityModel {
   final String? cityImage;
-  final String? cityName;
-  CityModel({this.cityImage, this.cityName});
+  final  String cityName;
+  CityModel({this.cityImage, required this.cityName});
 }
