@@ -1,11 +1,13 @@
+import 'package:first_flutter_app/models/country_model.dart';
 import 'package:flutter/material.dart';
 
 class CountryDetailScreen extends StatelessWidget {
-   const CountryDetailScreen({Key? key, required this.imageUrl,  required this.countryName, required this.detail}) : super(key: key);
+  const CountryDetailScreen(
+      {Key? key,
+      required this.country})
+      : super(key: key);
 
-  final String imageUrl;
-  final String countryName;
-  final String detail;
+  final CountryModel country;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,8 +25,8 @@ class CountryDetailScreen extends StatelessWidget {
             padding: EdgeInsets.all(10.0),
             width: 200,
             child: Image.network(
-              fit:BoxFit.contain,
-              imageUrl,
+              fit: BoxFit.contain,
+              country.countryFlag,
             ),
           ),
           SizedBox(
@@ -33,20 +35,22 @@ class CountryDetailScreen extends StatelessWidget {
           Container(
             padding: EdgeInsets.all(10.0),
             child: Text(
-              countryName,
+             country.countryName,
               style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
             ),
           ),
-           SizedBox(
+          SizedBox(
             height: 15.0,
           ),
           Expanded(
             child: Container(
-              width:double.infinity,
+              width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: Text(
-                detail,
-                style: TextStyle(fontSize: 16.0,),
+                country.countryDetail,
+                style: TextStyle(
+                  fontSize: 16.0,
+                ),
               ),
             ),
           )
